@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="prefetch stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Newsletter SignUp</title>
+  </head>
+  <body>
+    <main class="hero">
+      <picture>
+        <source
+          media="(min-width:768px )"
+          srcset="./assets/illustration-sign-up-desktop.svg"
+          width="400px"
+          height="593px"
+        />
+        <img
+          src="./assets/illustration-sign-up-mobile.svg"
+          alt=""
+          class="hero-img"
+          width="375px"
+          height="284px"
+        />
+      </picture>
+      <div class="hero-txt">
+        <h1 class="hero__heading">Stay Updated!</h1>
+        <p class="hero__para">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ol class="hero-feature-container">
+          <li class="hero__features">
+            <div class="check-box">
+              <box-icon type="solid" name="check-circle" size="sm"></box-icon>
+            </div>
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li class="hero__features">
+            <div class="check-box">
+              <box-icon type="solid" name="check-circle" size="sm"></box-icon>
+            </div>
+            <p>Product Measuring to ensure updates are a success</p>
+          </li>
+          <li class="hero__features">
+            <div class="check-box">
+              <box-icon type="solid" name="check-circle" size="sm"></box-icon>
+            </div>
+            <p>Product And much more!</p>
+          </li>
+        </ol>
+        <div class="form">
+          <div class="email-container">
+            <label for="email" class="email__heading">Email address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="email@company.com"
+              id="email-field"
+              class="email__field"
+            />
+          </div>
+          <button type="submit" id="submit-btn" class="submit__btn">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <section class="submit-card" style="display: none">
+      <box-icon type="solid" name="check-circle"></box-icon>Product And much
+      <h1 class="submit-card__heading">Thanks for subscribing!</h1>
+      <p class="submit-card__para">
+        A confirmation email has been sent to
+        <strong>ash@loremcompany.com</strong>. Please open it and click the
+        button inside to confirm your subscription.
+      </p>
+      <button type="reset">Dismiss message</button>
+    </section>
+    <script type="module" src="main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
