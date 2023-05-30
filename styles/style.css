@@ -216,6 +216,9 @@ box-icon {
     max-width: 23.5rem;
     padding: 0;
   }
+  .hero-img {
+    width: 100%;
+  }
   .hero__heading,
   .submit-card__heading {
     font-size: 3.5rem;
