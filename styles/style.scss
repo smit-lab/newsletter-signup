@@ -1,7 +1,6 @@
 @import "reset";
 @import "function";
 @import "variable";
-@import "desktop";
 
 body {
   color: $dark-navy;
@@ -18,9 +17,11 @@ body {
 .submit-btn {
   font-size: rem(16);
 }
-
+.hero-img {
+  width: 100vw;
+}
 .hero-txt {
-  padding: rem(40) 0;
+  padding: rem(40) 0 rem(0);
   max-width: rem(327);
   margin: 0 auto;
 }
@@ -36,18 +37,19 @@ body {
   flex-direction: column;
   gap: rem(10);
 }
+
+box-icon {
+  fill: $orange;
+}
+
 .hero__features {
   display: flex;
   align-items: flex-start;
   gap: rem(16);
-
-  & box-icon {
-    fill: $orange;
-  }
 }
 
 .form {
-  margin-top: rem(40);
+  margin-top: rem(26);
 }
 
 .email-container {
@@ -57,7 +59,14 @@ body {
   margin-bottom: rem(24);
 }
 
-.email__heading {
+.email-lables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email__heading,
+.error__msg {
   font-size: rem(12);
   font-weight: 700;
 }
@@ -91,17 +100,80 @@ body {
   background: $dark-navy;
   color: $white;
   width: 100%;
+  font-family: "Roboto", sans-serif;
   border-radius: rem(8);
   border: none;
   font-weight: 700;
   height: rem(56);
-  transition: all 2000ms ease 0s;
-  -moz-transition: all 2000ms ease 0s;
+  transition: all 200ms ease 0s;
+  -moz-transition: all 200ms ease 0s;
   &:hover {
     background: -webkit-linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
     background: -o-linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
     background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
-    transition: all 2000ms ease 0s;
-    -moz-transition: all 2000ms ease 0s;
   }
 }
+
+.submit-card {
+  width: rem(327);
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $white;
+  display: none;
+}
+
+.submit-card__heading {
+  margin-bottom: rem(24);
+}
+
+.submit-check-icon {
+  margin-bottom: rem(40);
+  font-size: rem(40);
+}
+
+.error__msg {
+  display: none;
+  color: $orange;
+}
+
+.display {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.email__error-state {
+  background: $orange-opac;
+  color: $orange;
+  border-color: $orange;
+
+  &:focus {
+    border-color: $orange;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@import "desktop";

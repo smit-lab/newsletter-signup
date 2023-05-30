@@ -1,1 +1,39 @@
- 
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+    background-color: $pale-navy;
+  }
+  .hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    padding: rem(24);
+    border-radius: rem(36);
+    width: rem(928);
+    display: flex;
+
+    &-txt {
+      max-width: rem(376);
+      padding: 0;
+    }
+  }
+
+  .hero__heading,
+  .submit-card__heading {
+    font-size: rem(56);
+  }
+
+  .submit-card {
+    width: rem(504);
+    height: rem(520);
+    border-radius: rem(36);
+    padding: rem(48) rem(64);
+  }
+
+  .display-none {
+    display: none;
+  }
+
+}

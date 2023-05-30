@@ -17,7 +17,7 @@
     <main class="hero">
       <picture>
         <source
-          media="(min-width:768px )"
+          media="(min-width:768px)"
           srcset="./assets/illustration-sign-up-desktop.svg"
           width="400px"
           height="593px"
@@ -46,7 +46,7 @@
             <div class="check-box">
               <box-icon type="solid" name="check-circle" size="sm"></box-icon>
             </div>
-            <p>Product Measuring to ensure updates are a success</p>
+            <p>Measuring to ensure updates are a success</p>
           </li>
           <li class="hero__features">
             <div class="check-box">
@@ -55,9 +55,12 @@
             <p>Product And much more!</p>
           </li>
         </ol>
-        <div class="form">
+        <form id="form-type" class="form" novalidate>
           <div class="email-container">
-            <label for="email" class="email__heading">Email address</label>
+            <div class="email-lables">
+              <label for="email" class="email__heading">Email address</label>
+              <label id="error-msg" class="error__msg">Oops, wrong email</label>
+            </div>
             <input
               type="email"
               name="email"
@@ -69,19 +72,43 @@
           <button type="submit" id="submit-btn" class="submit__btn">
             Subscribe to monthly newsletter
           </button>
-        </div>
+        </form>
       </div>
     </main>
 
-    <section class="submit-card" style="display: none">
-      <box-icon type="solid" name="check-circle"></box-icon>Product And much
-      <h1 class="submit-card__heading">Thanks for subscribing!</h1>
-      <p class="submit-card__para">
-        A confirmation email has been sent to
-        <strong>ash@loremcompany.com</strong>. Please open it and click the
-        button inside to confirm your subscription.
-      </p>
-      <button type="reset">Dismiss message</button>
+    <section class="submit-card">
+      <div class="txt">
+        <svg
+          class="submit-check-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+        >
+          <defs>
+            <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+              <stop offset="0%" stop-color="#FF6A3A" />
+              <stop offset="100%" stop-color="#FF527B" />
+            </linearGradient>
+          </defs>
+          <g fill="none">
+            <circle cx="32" cy="32" r="32" fill="url(#a)" />
+            <path
+              stroke="#FFF"
+              stroke-width="4"
+              d="m18.286 34.686 8.334 7.98 19.094-18.285"
+            />
+          </g>
+        </svg>
+
+        <h1 class="submit-card__heading">Thanks for subscribing!</h1>
+        <p class="submit-card__para">
+          A confirmation email has been sent to
+          <strong><span id="submitted-email"></span></strong>. Please open it
+          and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button id="dismissed-btn" class="submit__btn">Dismiss message</button>
     </section>
     <script type="module" src="main.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

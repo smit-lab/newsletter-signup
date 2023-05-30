@@ -42,8 +42,12 @@ body {
   font-size: 1rem;
 }
 
+.hero-img {
+  width: 100vw;
+}
+
 .hero-txt {
-  padding: 2.5rem 0;
+  padding: 2.5rem 0 0rem;
   max-width: 20.4375rem;
   margin: 0 auto;
 }
@@ -60,17 +64,18 @@ body {
   gap: 0.625rem;
 }
 
+box-icon {
+  fill: #ff6155;
+}
+
 .hero__features {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
-.hero__features box-icon {
-  fill: #ff6155;
-}
 
 .form {
-  margin-top: 2.5rem;
+  margin-top: 1.625rem;
 }
 
 .email-container {
@@ -80,7 +85,14 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.email__heading {
+.email-lables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email__heading,
+.error__msg {
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -112,19 +124,111 @@ body {
   background: #242742;
   color: #fff;
   width: 100%;
+  font-family: "Roboto", sans-serif;
   border-radius: 0.5rem;
   border: none;
   font-weight: 700;
   height: 3.5rem;
-  transition: all 2000ms ease 0s;
-  -moz-transition: all 2000ms ease 0s;
+  transition: all 200ms ease 0s;
+  -moz-transition: all 200ms ease 0s;
 }
 .submit__btn:hover {
   background: -webkit-linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
   background: -o-linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
   background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
-  transition: all 2000ms ease 0s;
-  -moz-transition: all 2000ms ease 0s;
+}
+
+.submit-card {
+  width: 20.4375rem;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  display: none;
+}
+
+.submit-card__heading {
+  margin-bottom: 1.5rem;
+}
+
+.submit-check-icon {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.error__msg {
+  display: none;
+  color: #ff6155;
+}
+
+.display {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.email__error-state {
+  background: rgba(255, 97, 85, 0.15);
+  color: #ff6155;
+  border-color: #ff6155;
+}
+.email__error-state:focus {
+  border-color: #ff6155;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+    background-color: #36384d;
+  }
+  .hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 2.25rem;
+    width: 58rem;
+    display: flex;
+  }
+  .hero-txt {
+    max-width: 23.5rem;
+    padding: 0;
+  }
+  .hero__heading,
+  .submit-card__heading {
+    font-size: 3.5rem;
+  }
+  .submit-card {
+    width: 31.5rem;
+    height: 32.5rem;
+    border-radius: 2.25rem;
+    padding: 3rem 4rem;
+  }
+  .display-none {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
